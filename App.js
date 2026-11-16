@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
-    https://prozzqzyvdyeeaukqbml.supabase.co,
-    sb_publishable_16jbn1VV3JXhAufzPnL_3g_YyZdNqfM
+    "https://prozzqzyvdyeeaukqbml.supabase.co",
+    "sb_publishable_16jbn1VV3JXhAufzPnL_3g_YyZdNqfM"
 )
 
 let Task_dragged = null;
