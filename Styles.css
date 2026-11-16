@@ -1,27 +1,99 @@
-: Root {
-  --Background_Color: #ffffff;
+:Root {
+  --Background_Color: #bdf2c8;
   --Todo_Color: #C63F50;
+  --Todo_Dark: #6e232d;
   --In_Progress_Color: #ECCF20;
-  --In_Review_Color: #9BD4E0;
+  --Progress_Dark: #907d14;
+  --In_Review_Color: #f59415;
+  --Review_Dark: #23636e;
   --Done_Color: #22c55e;
+  --Button_Nav: #0e5a2a;
 }
 
-.Task_box {
-  display: flex;
+body {
+  background: var(--Background_Color);
 }
 
-#todo {
+header {
+  background: var(--Review_Dark);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 450px);
+  gap: 10px;
+  justify-content:center;
+  padding: 20px;
+  
+}
+
+.column {
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 600px;
+}
+
+.todo {
   background-color: var(--Todo_Color);
 }
 
-#in_progress {
-  background-color: var(--In_Progress_Color);
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 10px;
+  padding: 20px;
+  background: var(--Button_Nav);
+  border-radius: 10px;
+  margin: 20px;
 }
 
-#in_review {
+.forms input, .forms textarea, .forms select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task-form textarea {
+  width: 250px;
+  height: 80px;
+}
+
+#create-task-button {
+  background-color:#6e232d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.in_progress {
   background-color: var(--In_Review_Color);
 }
 
-#done {
+.in_review {
+  background-color: var(--In_Progress_Color);
+}
+
+.done {
   background-color: var(--Done_Color);
 }
+
+.column h2 {
+  text-align: center;
+}
+
+.task-card {
+  background: var(--Background_Color);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: move;
+  box-shadow: 0 2px 5px rgba(0,0,0,.15)
+}
+

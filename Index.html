@@ -4,13 +4,51 @@
 <meta charset="utf-8">
 <title>Task Board</title>
 <link href="Styles.css" rel="stylesheet" type="text/css">
+<script src="Script.js"></script>
 </head>
 
 <body>
-  <main>
-    <div class="task_box" id="todo"><p>Test Text</p></div>
-    <div class="task_box" id="in_progress"><p>Test Text</p></div>
-    <div class="task_box" id="in_review"><p>Test Text</p></div>
-    <div class="task_box" id="done"><p>Test Text</p></div>
-  </main>
+  <header>
+    <h1> Task Board </h1>
+  </header>
+  <div class="forms">
+    <input type="text" id="task-title" placeholder="Title" required>
+
+    <textarea id="task-description" placeholder="Description"></textarea>
+
+    <select id="task-priority">
+      <option value="n/a">None</option>
+      <option value="low">Low</option>
+      <option value="normal">Normal</option>
+      <option value="high">High</option>
+    </select>
+
+    <input type="date" id="task-due-date">
+
+    <button id="create-task-button">
+      Create Task
+    </button>
+
+  </div>
+  <div class ="board">
+    <div class="column todo" data-status="todo">
+      <h2>To Do</h2>
+      <div class="task-list"></div>
+    </div>
+
+    <div class="column in_progress" data-status="in_progress">
+      <h2>In Progress</h2>
+      <div class="task-list"></div>
+    </div>
+
+    <div class="column in_review" data-status="in_review">
+      <h2>In Review</h2>
+      <div class="task-list"></div>
+    </div>
+
+    <div class="column done" data-status="done">
+      <h2>Done</h2>
+      <div class="task-list"></div>
+    </div>
+  </div>
 </body>
