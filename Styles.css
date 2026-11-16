@@ -1,6 +1,9 @@
 : Root {
-  --Primary_Color: #ffffff;
-  --Secondary_Color: #22c55e;
+  --Background_Color: #ffffff;
+  --Todo_Color: #C63F50;
+  --In_Progress_Color: #ECCF20;
+  --In_Review_Color: #9BD4E0;
+  --Done_Color: #22c55e;
 }
 
 
