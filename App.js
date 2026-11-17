@@ -1,8 +1,10 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js';
 
+const KEY = "sb_publishable_16jbn1VV3JXhAufzPnL_3g_YyZdNqfM"
+
 const supabase = createClient(
     "https://prozzqzyvdyeeaukqbml.supabase.co",
-    "sb_publishable_16jbn1VV3JXhAufzPnL_3g_YyZdNqfM"
+    KEY
 )
 
 let Task_dragged = null;
