@@ -1,11 +1,10 @@
 :Root {
   --Background_Color: #bdf2c8;
   --Todo_Color: #C63F50;
-  --Todo_Dark: #6e232d;
-  --In_Progress_Color: #ECCF20;
-  --Progress_Dark: #ffffff;
-  --In_Review_Color: #f59415;
-  --Review_Dark: #23636e;
+  --In_Review_Color: #ECCF20;
+  --Card_Background: #ffffff;
+  --In_Progress_Color: #f59415;
+  --Head_Color: #23636e;
   --Done_Color: #22c55e;
   --Button_Nav: #0e5a2a;
 }
@@ -15,7 +14,7 @@ body {
 }
 
 header {
-  background: var(--Review_Dark);
+  background: var(--Head_Color);
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -74,11 +73,11 @@ header {
 }
 
 .in_progress {
-  background-color: var(--In_Review_Color);
+  background-color: var(--In_Progress_Color);
 }
 
 .in_review {
-  background-color: var(--In_Progress_Color);
+  background-color: var(--In_Review_Color);
 }
 
 .done {
@@ -93,7 +92,7 @@ header {
 }
 
 .task-card {
-  background: var(--Progress_Dark);
+  background: var(--Card_Background);
   padding: 12px;
   margin-bottom: 10px;
   cursor: move;
