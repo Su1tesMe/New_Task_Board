@@ -35,6 +35,7 @@ header {
   border-radius: 10px;
   padding: 15px;
   min-height: 600px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.15)
 }
 
 .todo {
@@ -86,6 +87,7 @@ header {
 
 .column h2 {
   text-align: center;
+  border: black;
 }
 
 .task-card {
