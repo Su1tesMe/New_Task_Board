@@ -55,7 +55,7 @@ async function createTask() {
     } = await supabase.auth.getUser();
 
     const {data, error} = await supabase.from("Tasks").insert([{
-        task_title: title, 
+        title: title, 
         description: description,
         priority: priority,
         due_date: due_date || null,
