@@ -7,6 +7,7 @@
   --Head_Color: #23636e;
   --Done_Color: #22c55e;
   --Button_Nav: #0e5a2a;
+  --Button_Background: #5a1c24;
   --True_Header: "Contrail One", sans-serif;
   --Column_Header: "Adamina", serif;
 }
@@ -67,7 +68,7 @@ header {
 }
 
 #create-task-button {
-  background-color: var(--Todo_Dark);
+  background-color: var(--Button_Background);
   color: white;
   border: none;
   padding: 10px 15px;
