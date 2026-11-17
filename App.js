@@ -91,6 +91,7 @@ document.querySelectorAll(".column").forEach (column => {
 
     column.addEventListener("drop", async () => {
 
+        if (!Task_dragged) return;
         column.querySelector(".task-list").appendChild(Task_dragged);
         const task_ID = Task_dragged.dataset.id;
         const new_status = column.dataset.status;
@@ -102,25 +103,26 @@ document.querySelectorAll(".column").forEach (column => {
 })
 
 document.getElementById("create-task-btn").addEventListener("click", createTask);
+const { data, DataError } = await supabase.auth.signInAnonymously();
 
-const {data: Tasks, error} = await supabase.from("Tasks").select("*").order("created_at");
-
-const { data, error } = await supabase.auth.signInAnonymously();
-
-if (error) {
-  console.error(error);
+if (DataError) {
+  console.error(DataError);
 } else {
   console.log("Guest user ID:", data.user.id);
 }
 
-if(error) {
-        console.error(error);
+const {data: Tasks, TaskError} = await supabase.from("Tasks").select("*").order("created_at");
+
+
+
+if(TaskError) {
+        console.error(TaskError);
         alert("Failed to catch task.");
         return;
     }
 
 Tasks.forEach(task => {
-    const column = document.querySelector(`[data-status="${task.status}] .task-list`);
+    const column = document.querySelector(`[data-status="${task.status}"] .task-list`);
 
     column.appendChild(createTaskCard(task));
 })
