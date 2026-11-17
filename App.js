@@ -103,9 +103,9 @@ document.querySelectorAll(".column").forEach (column => {
 
 document.getElementById("create-task-btn").addEventListener("click", createTask);
 
-const {data: tasks, error} = await supabase.from("Tasks").select("*").order("created_at");
+const {data: Tasks, error} = await supabase.from("Tasks").select("*").order("created_at");
 
-tasks.forEach(task => {
+Tasks.forEach(task => {
     const column = document.querySelector(`[data-status="${task.status}] .task-list`);
 
     column.appendChild(createTaskCard(task));
