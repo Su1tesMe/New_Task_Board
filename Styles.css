@@ -3,7 +3,7 @@
   --Todo_Color: #C63F50;
   --Todo_Dark: #6e232d;
   --In_Progress_Color: #ECCF20;
-  --Progress_Dark: #907d14;
+  --Progress_Dark: #ffffff;
   --In_Review_Color: #f59415;
   --Review_Dark: #23636e;
   --Done_Color: #22c55e;
@@ -64,7 +64,7 @@ header {
 }
 
 #create-task-button {
-  background-color:#6e232d;
+  background-color: var(--Todo_Dark);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -89,7 +89,7 @@ header {
 }
 
 .task-card {
-  background: var(--Background_Color);
+  background: var(--Progress_Dark);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
