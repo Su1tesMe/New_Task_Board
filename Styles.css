@@ -7,6 +7,8 @@
   --Head_Color: #23636e;
   --Done_Color: #22c55e;
   --Button_Nav: #0e5a2a;
+  --True_Header: "Contrail One", sans-serif;
+  --Column_Header: "Adamina", serif;
 }
 
 body {
@@ -19,6 +21,7 @@ header {
   padding: 15px;
   text-align: center;
   color: var(--Card_Background);
+  font-family: var(--True_Header);
 }
 
 .board {
@@ -89,6 +92,7 @@ header {
   border: dotted;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: var(--Column_Header);
 }
 
 .task-card {
