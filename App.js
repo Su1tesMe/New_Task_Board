@@ -118,7 +118,6 @@ const {data: Tasks, TaskError} = await supabase.from("Tasks").select("*").order(
 if(TaskError) {
         console.error(TaskError);
         alert("Failed to catch task.");
-        return;
     }
 
 Tasks.forEach(task => {
