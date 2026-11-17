@@ -87,7 +87,7 @@ header {
 
 .column h2 {
   text-align: center;
-  border: black;
+  border: solid;
 }
 
 .task-card {
