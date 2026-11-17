@@ -102,7 +102,7 @@ document.querySelectorAll(".column").forEach (column => {
     
 })
 
-document.getElementById("create-task-btn").addEventListener("click", createTask);
+document.getElementById("create-task-button").addEventListener("click", createTask);
 const { data, DataError } = await supabase.auth.signInAnonymously();
 
 if (DataError) {
