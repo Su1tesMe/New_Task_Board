@@ -105,6 +105,12 @@ document.getElementById("create-task-btn").addEventListener("click", createTask)
 
 const {data: Tasks, error} = await supabase.from("Tasks").select("*").order("created_at");
 
+if(error) {
+        console.error(error);
+        alert("Failed to catch task.");
+        return;
+    }
+
 Tasks.forEach(task => {
     const column = document.querySelector(`[data-status="${task.status}] .task-list`);
 
