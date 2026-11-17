@@ -88,6 +88,8 @@ header {
 .column h2 {
   text-align: center;
   border: dotted;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .task-card {
