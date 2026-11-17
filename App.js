@@ -105,6 +105,14 @@ document.getElementById("create-task-btn").addEventListener("click", createTask)
 
 const {data: Tasks, error} = await supabase.from("Tasks").select("*").order("created_at");
 
+const { data, error } = await supabase.auth.signInAnonymously();
+
+if (error) {
+  console.error(error);
+} else {
+  console.log("Guest user ID:", data.user.id);
+}
+
 if(error) {
         console.error(error);
         alert("Failed to catch task.");
