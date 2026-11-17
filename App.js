@@ -34,7 +34,7 @@ function createTaskCard(task) {
 function clearForm() {
     document.getElementById("task-title").value = "";
     document.getElementById("task-description").value = "";
-    document.getElementById("task-priority").value = "";
+    document.getElementById("task-priority").value = "low";
     document.getElementById("task-due-date").value = "";
 }
 
