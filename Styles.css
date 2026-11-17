@@ -90,7 +90,6 @@ header {
 
 .task-card {
   background: var(--Progress_Dark);
-  border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
   cursor: move;
